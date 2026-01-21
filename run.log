@@ -1,0 +1,40 @@
+
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│                         ▄▀▀ ▄▀█ █▀▀ ▀█▀ █▀▄▀█ █▀▀ █▀█                        │
+│                         █▀  █▀█ ▄▄█  █  █ ▀ █ █▄▄ █▀▀                        │
+│                                                                              │
+│                                FastMCP 2.13.0                                │
+│                                                                              │
+│                                                                              │
+│                   🖥  Server name: CL LLM Query MCP Server                    │
+│                                                                              │
+│                   📦 Transport:   HTTP                                       │
+│                   🔗 Server URL:  http://0.0.0.0:8001/mcp                    │
+│                                                                              │
+│                   📚 Docs:        https://gofastmcp.com                      │
+│                   🚀 Hosting:     https://fastmcp.cloud                      │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+[10/25/25 20:59:36] INFO     Starting MCP server 'CL LLM Query    server.py:2049
+                             MCP Server' with transport                         
+                             'streamable-http' on                               
+                             http://0.0.0.0:8001/mcp                            
+INFO:     Started server process [22693]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     10.12.92.39:54621 - "GET /mcp HTTP/1.1" 406 Not Acceptable
+INFO:     10.12.92.39:54621 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     10.12.92.54:54260 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     10.12.92.54:54260 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     10.12.92.54:54260 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     10.12.92.54:54262 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     Shutting down
+ERROR:    Cancel 0 running task(s), timeout graceful shutdown exceeded
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22693]
