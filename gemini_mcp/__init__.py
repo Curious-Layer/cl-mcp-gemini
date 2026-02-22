@@ -1,0 +1,1 @@
+"""Gemini MCP server package."""
