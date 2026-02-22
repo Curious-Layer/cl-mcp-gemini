@@ -13,6 +13,17 @@ def register_tools(mcp: FastMCP) -> None:
         gemini_api_key: str,
         model: str = "gemini-2.5-flash",
     ) -> GeminiGenerateTextResponse:
+        """Generate text from Gemini.
+
+        Args:
+            query: Natural language prompt to send to Gemini.
+            gemini_api_key: Google Gemini API key used as the `key` query parameter.
+            model: Gemini model name. Example values: `gemini-2.5-flash`,
+                `gemini-2.5-pro`.
+
+        Returns:
+            A dictionary containing the original prompt and generated text response.
+        """
         headers = {"Content-Type": "application/json"}
         params = {"key": gemini_api_key}
 
