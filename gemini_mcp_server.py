@@ -3,7 +3,7 @@ from gemini_mcp.cli import parse_args
 from gemini_mcp.tools import register_tools
 
 
-mcp = FastMCP("CL LLM Query MCP Server")
+mcp = FastMCP("Gemini LLM Query MCP Server")
 register_tools(mcp)
 
 
