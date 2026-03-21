@@ -165,7 +165,7 @@ Ensure your API key has access to:
 - **[Google Gemini API](https://aistudio.google.com/api-keys)** — Official Gen AI API reference
 - **[Google Cloud Console](https://console.cloud.google.com/)** — Credentials management
 - **[Gemini API Reference](https://ai.google.dev/api)** — Complete Gemini API endpoint reference
-- **[Model Context Protocol Docs](https://modelcontextprotocol.io/)** — MCP specification
+- **[FastMCP Docs](https://gofastmcp.com/v2/getting-started/welcome)** — FastMCP specification
 
 </details>
 
