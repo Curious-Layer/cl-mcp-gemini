@@ -58,6 +58,8 @@ POST /mcp/cl-llm-query/gemini_ai_generate_text
 
 ---
 
+## Reference & Support
+
 <details>
 <summary><strong>API Parameters Reference</strong></summary>
 
@@ -166,7 +168,6 @@ Ensure your API key has access to:
 - **[Google Cloud Console](https://console.cloud.google.com/)** — Credentials management
 - **[Gemini API Reference](https://ai.google.dev/api)** — Complete Gemini API endpoint reference
 - **[FastMCP Docs](https://gofastmcp.com/v2/getting-started/welcome)** — FastMCP specification
-
 </details>
 
 ---
