@@ -1,5 +1,3 @@
-# Gemini MCP Server
-
 **Generate text using Google's Gemini LLM via API.**
 
 A Model Context Protocol (MCP) server that exposes Google Gemini's API for generating text content.
