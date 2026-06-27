@@ -20,11 +20,14 @@ def register_generate_tools(mcp: FastMCP) -> None:
     @mcp.tool(
         name="generate_text",
         description="Generate text using Gemini LLM",
-        annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False, openWorldHint=True),
+        annotations=ToolAnnotations(
+            readOnlyHint=False, destructiveHint=False, openWorldHint=True
+        ),
     )
     def generate_text(
         query: str = Field(
-            ..., description="Required. Natural language prompt to send to Gemini. Any text is accepted; no length limit is enforced by this tool.",
+            ...,
+            description="Required. Natural language prompt to send to Gemini. Any text is accepted; no length limit is enforced by this tool.",
         ),
         model: Optional[str] = Field(
             default="gemini-2.5-flash",
@@ -44,8 +47,11 @@ def register_generate_tools(mcp: FastMCP) -> None:
                     text = data["candidates"][0]["content"]["parts"][0]["text"]
                 except KeyError:
                     return _err(
-                        GeminiGenerateTextResult, tlog,
-                        "UPSTREAM_ERROR", "Unexpected response shape", 502
+                        GeminiGenerateTextResult,
+                        tlog,
+                        "UPSTREAM_ERROR",
+                        "Unexpected response shape",
+                        502,
                     )
                 tlog.success()
                 return GeminiGenerateTextResult(
@@ -53,6 +59,8 @@ def register_generate_tools(mcp: FastMCP) -> None:
                     statusCode=status,
                     data=GeminiGenerateTextData(prompt=query, response=text),
                 )
-            return _upstream_err(GeminiGenerateTextResult, tlog, status, data, retry_after)
+            return _upstream_err(
+                GeminiGenerateTextResult, tlog, status, data, retry_after
+            )
         except Exception as exc:
             return _handle_request_exc(GeminiGenerateTextResult, tlog, exc)
