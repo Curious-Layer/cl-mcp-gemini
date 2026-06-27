@@ -24,11 +24,11 @@ def register_generate_tools(mcp: FastMCP) -> None:
     )
     def gemini_ai_generate_text(
         query: str = Field(
-            ..., description="Natural language prompt to send to Gemini."
+            ..., description="Required. Natural language prompt to send to Gemini. Any text is accepted; no length limit is enforced by this tool.",
         ),
         model: Optional[str] = Field(
             default="gemini-2.5-flash",
-            description="Gemini model name, e.g., 'gemini-2.5-flash' or 'gemini-2.5-pro'.",
+            description="Optional. Gemini model name, e.g., 'gemini-2.5-flash' or 'gemini-2.5-pro'. Defaults to 'gemini-2.5-flash'.",
         ),
     ) -> GeminiGenerateTextResult:
         tlog = ToolLogger(logger, "gemini_ai_generate_text")
