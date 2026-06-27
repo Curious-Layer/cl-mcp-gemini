@@ -1,4 +1,4 @@
-"""Generate group: gemini_ai_generate_text"""
+"""Generate group: generate_text"""
 
 import logging
 
@@ -18,11 +18,11 @@ logger = logging.getLogger("gemini-mcp.tools.generate")
 def register_generate_tools(mcp: FastMCP) -> None:
 
     @mcp.tool(
-        name="gemini_ai_generate_text",
+        name="generate_text",
         description="Generate text using Gemini LLM",
         annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False, openWorldHint=True),
     )
-    def gemini_ai_generate_text(
+    def generate_text(
         query: str = Field(
             ..., description="Required. Natural language prompt to send to Gemini. Any text is accepted; no length limit is enforced by this tool.",
         ),
@@ -31,7 +31,7 @@ def register_generate_tools(mcp: FastMCP) -> None:
             description="Optional. Gemini model name, e.g., 'gemini-2.5-flash' or 'gemini-2.5-pro'. Defaults to 'gemini-2.5-flash'.",
         ),
     ) -> GeminiGenerateTextResult:
-        tlog = ToolLogger(logger, "gemini_ai_generate_text")
+        tlog = ToolLogger(logger, "generate_text")
 
         body = {"contents": [{"parts": [{"text": query}]}]}
 

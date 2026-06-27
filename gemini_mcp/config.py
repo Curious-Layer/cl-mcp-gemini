@@ -3,8 +3,10 @@
 import logging
 import os
 
-SERVER_VERSION = "v1.0.0"
-BREAKING_CHANGES: list[dict] = []
+SERVER_VERSION = "v1.1.0"
+BREAKING_CHANGES: list[dict] = [
+    {"version": "v1.1.0", "change": "Tool renamed from 'gemini_ai_generate_text' to 'generate_text'"},
+]
 
 GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta/models/"
 

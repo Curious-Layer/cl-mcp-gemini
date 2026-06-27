@@ -22,7 +22,7 @@ Perfect for:
 
 
 <details>
-<summary><code>gemini_ai_generate_text</code> — Generate text using Gemini LLM</summary>
+<summary><code>generate_text</code> — Generate text using Gemini LLM</summary>
 
 Generate text using Gemini LLM
 
@@ -143,7 +143,7 @@ Every tool returns the same top-level envelope. Only `data` varies per tool.
 
 - **Cause:** Incorrect server name in the API endpoint
 - **Solution:**
-  1. Verify endpoint format: `mewcp-gemini/mcp/gemini_ai_generate_text`
+  1. Verify endpoint format: `mewcp-gemini/mcp/generate_text`
   2. Use correct server name from documentation
   3. Check available servers in your Curious Layer account
 
